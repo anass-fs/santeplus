@@ -1,15 +1,18 @@
 # SantePlus
 
-SantePlus is a web application built with Symfony that helps manage medical appointments. It features user authentication, doctor and patient management, appointment scheduling, and PDF generation for appointments.
+SantePlus is a modern and user-friendly web application designed to streamline the process of scheduling medical appointments. Built with the Symfony framework, it provides a seamless experience for both patients and healthcare providers. Patients can easily find doctors, view their availability, and book appointments online. The platform supports both online and in-person consultations, making healthcare more accessible.
 
-## Features
+## Key Features
+-   **Medecin (Doctor) Management:** A comprehensive system for managing doctor profiles, including their specialties and schedules.
+-   **Patient Management:** Allows patients to create and manage their profiles and view their appointment history.
+-   **RendezVous (Appointment) Scheduling:** An intuitive interface for scheduling, viewing, and managing appointments.
+-   **Admin Dashboard:** A powerful dashboard for administrators to oversee and manage the entire application.
 
--   **User Authentication:** Secure login and registration for different user roles (e.g., admin, patient).
--   **Medecin (Doctor) Management:** Create, read, update, and delete doctor profiles.
--   **Patient Management:** Create, read, update, and delete patient profiles.
--   **RendezVous (Appointment) Scheduling:** Schedule and manage appointments between patients and doctors.
--   **PDF Generation:** Generate printable PDF documents for appointment details using Dompdf.
--   **Admin Dashboard:** A dedicated interface for administrators to manage the application's data.
+## Our Services
+
+SantePlus offers two types of consultation services to meet the diverse needs of our patients:
+-   **Online Consultation:** Patients can connect with doctors remotely through our secure platform, allowing for convenient access to medical advice from the comfort of their homes.
+-   **In-Person Consultation:** For appointments that require a physical examination, patients can book a visit to our medical center.
 
 ## Installation
 
@@ -81,10 +84,10 @@ Follow these steps to set up the SantePlus project on your local machine.
 
 ## Technologies Used
 
--   **Symfony 6.4:** PHP Framework
--   **Doctrine ORM:** For database interaction
--   **Twig:** Templating engine
--   **Dompdf:** For PDF generation
--   **Bootstrap (implied by assets/css/style.css, admin.css):** Frontend styling
--   **JavaScript (implied by assets/js/script.js):** Frontend interactivity
--   **Composer:** Dependency Management
+-   **Symfony 6.4:** The core PHP framework for building the application.
+-   **Doctrine ORM:** For database management and interaction.
+-   **Twig:** The templating engine for rendering dynamic content.
+-   **Dompdf:** For generating PDF documents.
+-   **Bootstrap:** For frontend styling and responsive design.
+-   **JavaScript:** For client-side interactivity.
+-   **Composer:** For managing PHP dependencies.
