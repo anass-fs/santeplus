@@ -1,0 +1,12 @@
+security:
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+
+    access_control:
+        # - { path: ^/dashboard, roles: ROLE_USER }
+        # - { path: ^/rendez-vous, roles: ROLE_USER }
+
+when@test:

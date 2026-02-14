@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}SantéPlus{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="{{ path('app_home') }}">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo SantéPlus" class="logo" />
+            </a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                    <li><a href="{{ path('app_medecin') }}">Médecins</a></li>
+                    <li><a href="{{ path('app_rendezvous_new') }}">Prendre RDV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button id="theme-toggle" class="theme-button">🌓 Mode sombre / clair</button>
+                
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="flash-messages-container">
+            {% for message in app.flashes('success') %}
+                <div class="flash-message flash-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {% for message in app.flashes('error') %}
+                <div class="flash-message flash-error">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {% for message in app.flashes('warning') %}
+                <div class="flash-message flash-warning">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {% for message in app.flashes('info') %}
+                <div class="flash-message flash-info">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+        {% block body %}{% endblock %}
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-contact">
+            <h4>Contactez-nous</h4>
+            <p>Email : <a href="mailto:contact@santeplus.com">contact@santeplus.com</a></p>
+            <p>Téléphone : <a href="tel:+212600112233">+212 600 112 233</a></p>
+            <p>Adresse : 123 Rue Santé, Casablanca, Maroc</p>
+        </div>
+    </footer>
+
+    <script src="{{ asset('js/script.js') }}?v=2"></script>
+    {% block javascripts %}{% endblock %}
+</body>
+</html>

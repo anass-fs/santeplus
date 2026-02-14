@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil | SantéPlus{% endblock %}
+
+{% block body %}
+    <section class="hero">
+        <h1>Bienvenue sur SantéPlus</h1>
+        <p>Votre plateforme de prise de rendez-vous médicaux en ligne.</p>
+        <a href="{{ path('app_rendezvous_new') }}" class="btn">Prendre un Rendez-vous</a>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Nos Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Consultation en ligne</h3>
+                <p>Prenez rendez-vous avec un médecin à distance.</p>
+            </div>
+            <div class="service-card">
+                <h3>Consultation sur place</h3>
+                <p>Consultez un médecin dans notre centre médical.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="section">
+        <h2>Découvrez SantéPlus en Vidéo</h2>
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="{{ asset('videos/medadom.mp4') }}" type="video/mp4" />
+            </video>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2>Ce que nos patients disent</h2>
+        <div class="testimonials-cards">
+            <div class="testimonial-card">
+                <p>"Très bon service, j'ai pu prendre un rendez-vous rapidement."</p>
+                <p>- Younes Ouaki</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Médecins très compétents et accueillants."</p>
+                <p>- Amine wahbi </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prendre Rendez-vous{% endblock %}
+
+{% block body %}
+    <section id="form-section" class="section">
+        {{ form_start(form, {'attr': {'id': 'rdv-form'}}) }}
+            <h1>Prendre un Rendez-vous</h1>
+
+            <div class="form-group">
+                {{ form_label(form.patient.nom) }}
+                {{ form_widget(form.patient.nom) }}
+                {{ form_errors(form.patient.nom) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.patient.prenom) }}
+                {{ form_widget(form.patient.prenom) }}
+                {{ form_errors(form.patient.prenom) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.patient.email) }}
+                {{ form_widget(form.patient.email) }}
+                {{ form_errors(form.patient.email) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.patient.telephone) }}
+                {{ form_widget(form.patient.telephone) }}
+                {{ form_errors(form.patient.telephone) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.patient.adresse) }}
+                {{ form_widget(form.patient.adresse) }}
+                {{ form_errors(form.patient.adresse) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.date) }}
+                {{ form_widget(form.date) }}
+                {{ form_errors(form.date) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.medecin) }}
+                {{ form_widget(form.medecin) }}
+                {{ form_errors(form.medecin) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.heure) }}
+                {{ form_widget(form.heure) }}
+                {{ form_errors(form.heure) }}
+            </div>
+
+            <button type="submit" class="submit-button">Envoyer</button>
+        {{ form_end(form) }}
+    </section>
+{% endblock %}

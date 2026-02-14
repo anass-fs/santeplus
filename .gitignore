@@ -1,0 +1,66 @@
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+# Composer
+/composer.phar
+
+# Assets
+/public/build/
+
+# Logs
+/var/log/*
+!/var/log/.gitkeep
+
+# Cache
+/var/cache/*
+!/var/cache/.gitkeep
+
+# Sessions
+/var/sessions/*
+!/var/sessions/.gitkeep
+
+# Parameters
+/config/parameters.yml
+/config/parameters.ini
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+
+# IDEs and editors
+.idea/
+.vscode/
+.DS_Store
+*.iml
+.project
+.settings
+.buildpath
+
+# Node.js
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Backup files
+*.bak
+*.swp
+*~.php
+.phpstorm.meta.php
+
+# Web server PID file
+/.web-server-pid
+
+# Blackfire
+.blackfire.yaml
+
+# Platform.sh
+.platform/
+.platform.app.yaml
+.platform.template.yaml

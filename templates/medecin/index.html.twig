@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Médecins | SantéPlus{% endblock %}
+
+{% block body %}
+    <section id="medecins" class="section">
+        <h1>Nos Médecins</h1>
+        <div class="medecins-container">
+            {% for medecin in medecins %}
+                <div class="medecin-card">
+                    {% if loop.index == 1 %}
+                        <img src="{{ asset('images/meda.jpg') }}" alt="{{ medecin.nom }}">
+                    {% elseif loop.index == 2 %}
+                        <img src="{{ asset('images/medb.jpeg') }}" alt="{{ medecin.nom }}">
+                    {% elseif loop.index == 3 %}
+                        <img src="{{ asset('images/medc.jpg') }}" alt="{{ medecin.nom }}">
+                    {% else %}
+                        <img src="{{ asset('images/meda.jpg') }}" alt="{{ medecin.nom }}">
+                    {% endif %}
+                    <h3>Dr. {{ medecin.nom }}</h3>
+                    <p>{{ medecin.specialite }}</p>
+                    <p>{{ medecin.ville }}</p>
+                    <p>{{ medecin.telephone }}</p>
+                </div>
+            {% else %}
+                <p>Aucun médecin disponible pour le moment.</p>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

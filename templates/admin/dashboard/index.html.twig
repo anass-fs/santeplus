@@ -1,0 +1,30 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Dashboard | Admin{% endblock %}
+
+{% block body %}
+    <h2>Tableau de Bord</h2>
+    <p>Bienvenue sur l'espace d'administration de SantéPlus.</p>
+
+    {# Grille des Indicateurs Clés de Performance (KPIs) #}
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <div class="value">{{ total_patients|default(0) }}</div>
+            <div class="title">Patients Enregistrés</div>
+        </div>
+        <div class="kpi-card">
+            <div class="value">{{ rdv_aujourdhui|default(0) }}</div>
+            <div class="title">Rendez-vous Aujourd'hui</div>
+        </div>
+        <div class="kpi-card">
+            <div class="value">{{ total_medecins|default(0) }}</div>
+            <div class="title">Médecins Actifs</div>
+        </div>
+        <div class="kpi-card">
+            <div class="value">{{ rdv_a_venir|default(0) }}</div>
+            <div class="title">Rendez-vous à venir</div>
+        </div>
+    </div>
+
+
+{% endblock %}
